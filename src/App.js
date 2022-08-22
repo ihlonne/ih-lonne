@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ChakraProvider, useMediaQuery } from '@chakra-ui/react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Navbar from './components/header/Navbar';
+import MobileNavbar from './components/header/MobileNavbar';
+import Hero from './components/hero/Hero';
+import Projects from './components/projects/Projects';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+
+const App = () => {
+    const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
+
+    return (
+        <ChakraProvider>
+            {isLargerThan1280 ? <Navbar /> : <MobileNavbar />}
+            <Hero />
+            <Projects />
+            <About />
+            <Contact />
+        </ChakraProvider>
+    );
+};
 
 export default App;

@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--white);
+    color: var(--dark);
+    width: 400px;
+    height: 250px;
+    transition: 1s;
+    border: 3px solid var(--dark);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+}
+.card img {
+    margin: 1rem;
+    width: 90%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark);
+    height: 40px;
+    margin-top: -2px;
+    margin-left: 0px;
+    padding: 0.5rem;
+    width: 101%;
+    color: var(--light);
+}
+
+.icon {
+    color: var(--blue);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.heading {
+    cursor: pointer;
+}
+
+.button {
+    background: var(--dark);
+    color: var(--light);
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.button:hover {
+    background: var(--gradient);
+
+    transition: 2s;
+}
+
+@media only screen and (max-width: 1280px) {
+    .boxes {
+        max-width: 330px;
+        max-height: 220px;
+    }
+}

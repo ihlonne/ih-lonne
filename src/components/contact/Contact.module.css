@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-boxes {
+    border: 1px solid var(--blue);
+    width: 800px;
+}
+
+.socials {
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: var(--dark);
+    font-size: 1.5rem;
+    transition: 2s;
+}
+
+.button-to-top {
+    position: sticky;
+    right: 20px;
+    bottom: 20px;
+}
+
+@media only screen and (max-width: 428px) {
+    .form-boxes {
+        width: 350px;
+    }
+}
