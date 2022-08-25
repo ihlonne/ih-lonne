@@ -70,7 +70,7 @@ const MobileHeader = () => {
                     as={GiHamburgerMenu}
                     style={{
                         background: 'transparent',
-                        color: '#9599E2',
+                        color: '#0c0c0c',
                         fontSize: '1.75rem',
                     }}
                     onClick={onOpen}
@@ -82,7 +82,7 @@ const MobileHeader = () => {
                         <DrawerHeader
                             padding="2rem "
                             fontSize="2rem"
-                            fontFamily="rough-love, sans-serif"
+                            fontFamily="britannic-bold-regular"
                         >
                             Navigate
                         </DrawerHeader>
@@ -140,7 +140,7 @@ const MobileHeader = () => {
                                     </ListItem>
                                     <ListItem>
                                         <a href={cv} download>
-                                            Resume
+                                            Résumé
                                         </a>
                                     </ListItem>
                                 </Stack>
@@ -149,9 +149,9 @@ const MobileHeader = () => {
 
                         <DrawerFooter>
                             <Button
-                                bg="#73A9E5"
+                                bg="#BE9981"
                                 color="#fff"
-                                borderRadius="2rem"
+                                borderRadius="10px"
                                 variant="filled"
                                 mr={3}
                                 onClick={onClose}

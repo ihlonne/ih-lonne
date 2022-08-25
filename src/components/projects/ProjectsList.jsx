@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-    Heading,
-    Wrap,
-    WrapItem,
-    Center,
-    useDisclosure,
-    Box,
-    Text,
-    Icon,
-    Image,
-} from '@chakra-ui/react';
+import { useDisclosure, Box, Text, Icon } from '@chakra-ui/react';
 import { BsBoxArrowInUpRight } from 'react-icons/bs';
 
 import ProjectsOne from './ProjectsOne';
@@ -39,98 +29,85 @@ const ProjectsList = () => {
     } = useDisclosure();
 
     return (
-        <Wrap mt="2rem" spacing="6" justify="center" w="100%">
-            <WrapItem className={classes.boxes}>
-                <Center className={classes.card}>
-                    <Box className={classes.header}>
-                        <Text
-                            onClick={onProjectOneOpen}
-                            className={classes.heading}
-                        >
-                            Linn's Little Library
-                        </Text>
-                        <Box>
-                            <Icon
-                                as={BsBoxArrowInUpRight}
-                                className={classes.icon}
-                                onClick={() =>
-                                    window.open(
-                                        'https://linnslittlelibrary.netlify.app',
-                                        '_blank'
-                                    )
-                                }
-                            />
-                        </Box>
+        <Box mt="2rem" spacing="4" className={classes['boxes-container']}>
+            <Box className={classes.boxes}>
+                <Box className={classes.card}>
+                    <Text
+                        onClick={onProjectOneOpen}
+                        className={classes.heading}
+                    >
+                        Linn's Little Library
+                    </Text>
+                    <Box>
+                        <Icon
+                            as={BsBoxArrowInUpRight}
+                            className={classes.icon}
+                            onClick={() =>
+                                window.open(
+                                    'https://linnslittlelibrary.netlify.app',
+                                    '_blank'
+                                )
+                            }
+                        />
                     </Box>
-
-                    <Image src={lllibrary} alt="screenshot" />
-                </Center>
-            </WrapItem>
+                </Box>
+            </Box>
             <ProjectsOne
                 isProjectOneOpen={isProjectOneOpen}
                 onProjectOneClose={onProjectOneClose}
             />
-            <WrapItem className={classes.boxes}>
-                <Center className={classes.card}>
-                    <Box className={classes.header}>
-                        <Text
-                            onClick={onProjectTwoOpen}
-                            className={classes.heading}
-                        >
-                            Portfolio V.1
-                        </Text>
-                        <Box>
-                            <Icon
-                                as={BsBoxArrowInUpRight}
-                                className={classes.icon}
-                                onClick={() =>
-                                    window.open(
-                                        'https://ihlonne.github.io/Portfolio/',
-                                        '_blank'
-                                    )
-                                }
-                            />
-                        </Box>
-                    </Box>
-                    <Image src={portfolio} alt="screenshot" />
-                </Center>
-            </WrapItem>
+            <Box className={classes.boxes}>
+                <Box className={classes.card}>
+                    <Text
+                        onClick={onProjectTwoOpen}
+                        className={classes.heading}
+                    >
+                        Portfolio V.1
+                    </Text>
+                    <Icon
+                        as={BsBoxArrowInUpRight}
+                        className={classes.icon}
+                        onClick={() =>
+                            window.open(
+                                'https://ihlonne.github.io/Portfolio/',
+                                '_blank'
+                            )
+                        }
+                    />
+                </Box>
+            </Box>
             <ProjectsTwo
                 isProjectTwoOpen={isProjectTwoOpen}
                 onProjectTwoClose={onProjectTwoClose}
             />
-            <WrapItem className={classes.boxes}>
-                <Center className={classes.card}>
-                    <Box className={classes.header}>
-                        <Text
-                            onClick={onProjectThreeOpen}
-                            className={classes.heading}
-                        >
-                            Huddle landing page
-                        </Text>
+            <Box className={classes.boxes}>
+                <Box className={classes.card}>
+                    <Text
+                        onClick={onProjectThreeOpen}
+                        className={classes.heading}
+                    >
+                        Huddle landing page
+                    </Text>
 
-                        <Box>
-                            <Icon
-                                as={BsBoxArrowInUpRight}
-                                className={classes.icon}
-                                onClick={() =>
-                                    window.open(
-                                        'https://ihlonne.github.io/Huddle-landing-page/',
-                                        '_blank'
-                                    )
-                                }
-                            />
-                        </Box>
+                    <Box>
+                        <Icon
+                            as={BsBoxArrowInUpRight}
+                            className={classes.icon}
+                            onClick={() =>
+                                window.open(
+                                    'https://ihlonne.github.io/Huddle-landing-page/',
+                                    '_blank'
+                                )
+                            }
+                        />
                     </Box>
-
-                    <Image src={huddle} alt="screenshot" />
-                </Center>
-            </WrapItem>
+                </Box>
+            </Box>
             <ProjectsThree
                 isProjectThreeOpen={isProjectThreeOpen}
                 onProjectThreeClose={onProjectThreeClose}
             />
-        </Wrap>
+        </Box>
     );
 };
 

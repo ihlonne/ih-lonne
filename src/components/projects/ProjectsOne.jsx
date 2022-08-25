@@ -31,14 +31,10 @@ const Project1 = ({ isProjectOneOpen, onProjectOneClose }) => {
             <DrawerOverlay />
             <DrawerContent>
                 <DrawerCloseButton />
-                <DrawerHeader
-                    padding="2rem "
-                    fontSize="2rem"
-                    fontFamily="rough-love, sans-serif"
-                >
+                <DrawerHeader fontSize="2rem" fontWeight="bold">
                     Book Finder App
                 </DrawerHeader>
-                <DrawerBody mt="-2rem">
+                <DrawerBody>
                     <Heading size="md" fontWeight="700">
                         A personal project
                     </Heading>

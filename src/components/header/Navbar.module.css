@@ -4,12 +4,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
     width: 100%;
     top: 0;
     left: 0;
-    background: var(--dark);
-    color: var(--light);
+    background: var(--white);
+    color: var(--dark);
     z-index: 99;
 }
 
@@ -20,8 +20,8 @@
     padding: 0 1.875rem;
 }
 .navbar-left img {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3rem;
+    width: 3rem;
     display: block;
 }
 
@@ -45,4 +45,5 @@
 
 .navbar-li {
     cursor: pointer;
+    text-transform: uppercase;
 }

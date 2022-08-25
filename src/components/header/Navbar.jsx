@@ -12,7 +12,7 @@ import { Link } from 'react-scroll';
 import { ImHome } from 'react-icons/im';
 
 import classes from './Navbar.module.css';
-import logo from '../assets/logo.png';
+import logo from '../assets/mylogo.png';
 import cv from '../assets/ihlonneCV.pdf';
 
 const Header = () => {
@@ -31,12 +31,13 @@ const Header = () => {
                         <Text
                             style={{
                                 fontWeight: '700',
-                                fontSize: '1.25rem',
+                                fontSize: '1.15rem',
                             }}
                         >
                             Ingelinn H. Lønne
                         </Text>
                         <Text
+                            mt="-.25rem"
                             style={{
                                 fontWeight: '400',
                                 fontSize: '0.75rem',
@@ -48,25 +49,19 @@ const Header = () => {
                 </Box>
             </Link>
             <Box className={classes['navbar-right']}>
-                <Link
-                    to="hero"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                >
-                    <Icon
-                        as={ImHome}
-                        mt="0.2rem"
-                        style={{
-                            background: 'transparent',
-                            color: '#8BC6EC',
-                            fontSize: '1.25rem',
-                        }}
-                    />
-                </Link>
                 <UnorderedList style={{ listStyle: 'none' }}>
                     <Stack direction="row" className={classes['navbar-li']}>
+                        <ListItem>
+                            <Link
+                                to="hero"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                Home
+                            </Link>
+                        </ListItem>
                         <ListItem>
                             <Link
                                 to="projects"
@@ -94,7 +89,7 @@ const Header = () => {
                                 to="contact"
                                 spy={true}
                                 smooth={true}
-                                offset={-50}
+                                offset={0}
                                 duration={500}
                             >
                                 Contact
@@ -102,7 +97,7 @@ const Header = () => {
                         </ListItem>
                         <ListItem>
                             <a href={cv} download>
-                                Resume
+                                Résumé
                             </a>
                         </ListItem>
                     </Stack>

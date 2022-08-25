@@ -8,19 +8,15 @@ import classes from './Projects.module.css';
 const Projects = () => {
     return (
         <Box className={classes.container} id="projects">
-            <Container className={classes['container-content']}>
-                <Box>
-                    <Heading
-                        size="2xl"
-                        fontFamily="rough-love, sans-serif"
-                        p="0 0 1rem 0"
-                    >
+            <Box className={classes['container-content']}>
+                <Box className={classes.box}>
+                    <Heading size="xl" p="0 0 1rem 0">
                         Projects
                     </Heading>
                     <Text>Please select a project for more information.</Text>
+                    <ProjectsList />
                 </Box>
-            </Container>
-            <ProjectsList />
+            </Box>
         </Box>
     );
 };

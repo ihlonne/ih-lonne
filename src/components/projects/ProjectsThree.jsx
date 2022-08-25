@@ -32,14 +32,10 @@ const Project3 = ({ isProjectThreeOpen, onProjectThreeClose }) => {
             <DrawerContent>
                 <DrawerCloseButton />
 
-                <DrawerHeader
-                    padding="2rem "
-                    fontSize="2rem"
-                    fontFamily="rough-love, sans-serif"
-                >
+                <DrawerHeader fontSize="2rem" fontWeight="bold">
                     Huddle Landing Page
                 </DrawerHeader>
-                <DrawerBody mt="-2rem">
+                <DrawerBody>
                     <Heading size="md" fontWeight="700">
                         A frontendmentor challenge
                     </Heading>
